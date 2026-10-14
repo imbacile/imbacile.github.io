@@ -3,26 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Demos · kulturvolk</title>
+    <title>Demos</title>
     <link rel="stylesheet" href="./shared/base.css" />
   </head>
   <body>
     <main>
       <h1>Demos</h1>
       <p>Small in-browser UI prototypes.</p>
-      <ul id="demos"></ul>
+      <ul id="demos">
+        <li><a href="./hello/">Hello</a></li>
+      </ul>
     </main>
-    <script type="module">
-      const list = document.getElementById('demos')
-      for (const { name, title } of __DEMOS__) {
-        const li = document.createElement('li')
-        const a = document.createElement('a')
-        a.href = `./${name}/`
-        a.textContent = title
-        li.append(a)
-        list.append(li)
-      }
-      if (!__DEMOS__.length) list.outerHTML = '<p>No demos yet.</p>'
-    </script>
   </body>
 </html>
